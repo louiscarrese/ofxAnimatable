@@ -28,6 +28,11 @@ void ofxAnimatableOfColor::applyCurrentColor(){
 }
 
 
+void ofxAnimatableOfColor::setTargetValue(ofColor targetVal){
+	targetColor_ = targetVal;
+}
+
+
 void ofxAnimatableOfColor::setColor(ofColor newColor){
 	ofxAnimatable::reset();
 	originalColor_ = newColor;
@@ -46,6 +51,13 @@ void ofxAnimatableOfColor::setAlphaOnly( float a ){
 	originalColor_.a = a;
 	targetColor_ = originalColor_;
 	ofxAnimatable::reset();
+}
+
+
+void ofxAnimatableOfColor::animate(){
+
+	originalColor_ = getCurrentColor();
+	ofxAnimatable::startAnimation();
 }
 
 

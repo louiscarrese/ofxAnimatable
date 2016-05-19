@@ -25,7 +25,7 @@ class ofxAnimatableOfColor : public ofxAnimatable {
 		void applyCurrentColor(); //apply current color
 	
 		// apply for immediate effect ////////////////////////////////////////////////////////////////////
-	
+		void setTargetValue( ofColor targetVal );
 		void setColor( ofColor newColor );
 		void revertToBaseColor();
 		void setAlphaOnly( float a );
@@ -33,6 +33,7 @@ class ofxAnimatableOfColor : public ofxAnimatable {
 		// animated over time ///////////////////////////////////////////////////////////////////////////
 
 			///starts new fade to "col" regardless, using the current color as the inital value
+		void animate();
 		void animateTo( ofColor col );
 		void animateToAfterDelay( ofColor newColor, float delay );
 		void animateToIfFinished( ofColor col );

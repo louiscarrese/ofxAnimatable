@@ -33,6 +33,11 @@ void ofxAnimatableOfPoint::draw(){
 	
 }
 
+void ofxAnimatableOfPoint::setTargetValue( ofPoint targetVal ){
+
+	targetPoint_ = targetVal;
+
+}
 
 void ofxAnimatableOfPoint::setPosition( ofPoint newPos ){
 	
@@ -73,6 +78,13 @@ void ofxAnimatableOfPoint::reset(){
 
 	ofxAnimatable::reset();
 	targetPoint_ = originalPoint_;
+}
+
+void ofxAnimatableOfPoint::animate(){
+
+  	originalPoint_ = getCurrentPosition();
+	ofxAnimatable::startAnimation();
+
 }
 
 

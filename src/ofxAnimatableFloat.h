@@ -18,7 +18,9 @@ class ofxAnimatableFloat : public ofxAnimatable{
 		~ofxAnimatableFloat(){};
 
 		void update( float dt );
-	
+
+		void setTargetValue(float targetVal);
+		void animate();
 		void animateTo( float newVal );
 		void animateToAfterDelay( float newVal, float delay );
 		void animateToIfFinished( float newVal );	///starts new animation to newVal only if there isnt an anim going on

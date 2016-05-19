@@ -20,6 +20,20 @@ void ofxAnimatableFloat::update( float dt ){
 	ofxAnimatable::update( dt );
 }
 
+void ofxAnimatableFloat::setTargetValue( float targetVal){
+
+	targetVal_ = targetVal;
+  
+}
+
+void ofxAnimatableFloat::animate(){
+
+	originalVal_ = val();
+  
+	ofxAnimatable::startAnimation();
+  
+}
+
 
 void ofxAnimatableFloat::animateTo( float newVal ){
 

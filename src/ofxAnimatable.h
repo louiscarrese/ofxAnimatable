@@ -111,6 +111,8 @@ class ofxAnimatable{
 		virtual void setup();
 		virtual void update(float dt);
 
+		virtual void animate() = 0;
+		
 		void autoUpdate(ofEventArgs&); //to by called by autoUpdate, dont call directly
 
 		void startAutoUpdate();
